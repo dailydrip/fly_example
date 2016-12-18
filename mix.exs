@@ -50,8 +50,7 @@ defmodule FlyExample.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      #{:fly, "~> 0.1.5"},
-      {:fly, github: "dailydrip/fly", branch: "feature/log_errors"},
+      {:fly, "~> 0.1.6"},
     ]
   end
 
