@@ -29,6 +29,8 @@ config :fly, :workers,
     resize: {Fly.Worker.Resize, %{}},
     video_to_palette: {FlyExample.Worker.VideoToPalette, %{}},
     video_to_gif: {FlyExample.Worker.VideoToGif, %{}},
+    text_image: {FlyExample.Worker.TextImage, %{}},
+    meme: {FlyExample.Worker.Meme, %{}},
   }
 
 config :porcelain, :driver, Porcelain.Driver.Goon
