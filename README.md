@@ -6,8 +6,11 @@ This is an example application showing off usage of my
 Elixir.  If you load it up and visit the root, you'll see an image that's
 resized on the fly.
 
+## Too lazy to pull it down?
 
-### About [DailyDrip](https://www.dailydrip.com)
+[Here's a demo, running on Heroku.](https://immense-forest-64118.herokuapp.com/)
+
+## About [DailyDrip](https://www.dailydrip.com)
 
 [![DailyDrip](https://github.com/dailydrip/fly/raw/master/assets/dailydrip.png)](https://www.dailydrip.com)
 
