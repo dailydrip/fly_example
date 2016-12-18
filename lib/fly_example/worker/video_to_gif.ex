@@ -25,7 +25,7 @@ defmodule FlyExample.Worker.VideoToGif do
     output_file = "#{output_file_root}.gif"
 
     # Actually generate the palette
-    %Porcelain.Result{status: 0} =
+    palette_result =
       Porcelain.exec("ffmpeg",
                      [
                        "-ss",
@@ -40,8 +40,13 @@ defmodule FlyExample.Worker.VideoToGif do
                        palette_file,
                      ])
 
+    case palette_result do
+      %Porcelain.Result{status: 0} -> :ok
+      %Porcelain.Result{status: _, err: error} -> Logger.error(error)
+    end
+
     # Step 2: Generate the gif
-    result =
+    gif_result =
       Porcelain.exec("ffmpeg",
                      [
                        "-i",
@@ -54,7 +59,7 @@ defmodule FlyExample.Worker.VideoToGif do
                        output_file,
                      ], [err: :string])
 
-    case result do
+    case gif_result do
       %Porcelain.Result{status: 0} -> :ok
       %Porcelain.Result{status: _, err: error} -> Logger.error(error)
     end
