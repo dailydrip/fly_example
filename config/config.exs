@@ -31,6 +31,9 @@ config :fly, :workers,
     video_to_gif: {FlyExample.Worker.VideoToGif, %{}},
   }
 
+config :porcelain, :driver, Porcelain.Driver.Goon
+config :porcelain, :goon_stop_timeout, 150_000
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
