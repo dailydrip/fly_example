@@ -10,6 +10,19 @@ resized on the fly.
 
 [Here's a demo, running on Heroku.](https://immense-forest-64118.herokuapp.com/)
 
+## Deploying it yourself
+
+Just push to heroku, using the following buildpacks:
+
+```
+https://github.com/HashNuke/heroku-buildpack-elixir.git
+https://github.com/gjaldon/heroku-buildpack-phoenix-static.git
+https://github.com/amberbit/heroku-buildpack-goon.git
+https://github.com/ello/heroku-buildpack-imagemagick
+https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+https://github.com/debitoor/heroku-buildpack-converter-fonts.git
+```
+
 ## About [DailyDrip](https://www.dailydrip.com)
 
 [![DailyDrip](https://github.com/dailydrip/fly/raw/master/assets/dailydrip.png)](https://www.dailydrip.com)
