@@ -45,6 +45,8 @@ defmodule FlyExample.Worker.VideoToGif do
       %Porcelain.Result{status: _, err: error} -> Logger.error(error)
     end
 
+    :timer.sleep 500
+
     # Step 2: Generate the gif
     gif_result =
       Porcelain.exec("ffmpeg",
@@ -63,6 +65,8 @@ defmodule FlyExample.Worker.VideoToGif do
       %Porcelain.Result{status: 0} -> :ok
       %Porcelain.Result{status: _, err: error} -> Logger.error(error)
     end
+
+    :timer.sleep 500
 
     File.read!(output_file)
   end
