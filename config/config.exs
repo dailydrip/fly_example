@@ -7,7 +7,8 @@ use Mix.Config
 
 # General application configuration
 config :fly_example,
-  ecto_repos: [FlyExample.Repo]
+  ecto_repos: [FlyExample.Repo],
+  atoms_to_prefetch: [:top, :bottom, :caption] # This is dumb
 
 # Configures the endpoint
 config :fly_example, FlyExample.Endpoint,
@@ -32,6 +33,7 @@ config :fly, :workers,
     text_image: {FlyExample.Worker.TextImage, %{}},
     meme: {FlyExample.Worker.Meme, %{}},
   }
+
 
 config :porcelain, :driver, Porcelain.Driver.Goon
 config :porcelain, :goon_stop_timeout, 150_000
