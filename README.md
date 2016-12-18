@@ -1,20 +1,16 @@
 # FlyExample
+> A project from [DailyDrip](https://www.dailydrip.com).
 
-To start your Phoenix app:
+This is an example application showing off usage of my
+[fly](http://github.com/dailydrip/fly) on-the-fly file processing framework for
+Elixir.  If you load it up and visit the root, you'll see an image that's
+resized on the fly.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
-  * Start Phoenix endpoint with `mix phoenix.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+### About [DailyDrip](https://www.dailydrip.com)
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+[![DailyDrip](http://github.com/dailydrip/fly/raw/master/assets/dailydrip.png)](https://www.dailydrip.com)
 
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+> This code is part of [Elixir Drips](https://www.dailydrip.com/topics/elixir/),
+> a daily continous learning website where you can just spend 5 minutes a day to
+> learn more about Elixir (or other things!)
