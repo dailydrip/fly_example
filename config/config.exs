@@ -26,7 +26,9 @@ config :fly, :workers,
   %{
     static: {Fly.Worker.StaticText, %{}},
     pngify: {Fly.Worker.Pngify, %{}},
-    resize: {Fly.Worker.Resize, %{}}
+    resize: {Fly.Worker.Resize, %{}},
+    video_to_palette: {FlyExample.Worker.VideoToPalette, %{}},
+    video_to_gif: {FlyExample.Worker.VideoToGif, %{}},
   }
 
 # Import environment specific config. This must remain at the bottom
