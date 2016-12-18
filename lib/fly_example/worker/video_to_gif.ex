@@ -4,6 +4,8 @@ defmodule FlyExample.Worker.VideoToGif do
   representing its palette, via `ffmpeg`, and returns the `.png` content.
   """
 
+  require Logger
+
   @doc """
   Turns an video into a `.png` palette.
   """
@@ -39,7 +41,7 @@ defmodule FlyExample.Worker.VideoToGif do
                      ])
 
     # Step 2: Generate the gif
-    %Porcelain.Result{status: 0} =
+    result =
       Porcelain.exec("ffmpeg",
                      [
                        "-i",
@@ -51,6 +53,11 @@ defmodule FlyExample.Worker.VideoToGif do
                        "-y",
                        output_file,
                      ], [err: :string])
+
+    case result do
+      %Porcelain.Result{status: 0} -> :ok
+      %Porcelain.Result{status: _, err: error} -> Logger.error(error)
+    end
 
     File.read!(output_file)
   end
