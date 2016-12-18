@@ -20,7 +20,7 @@ https://github.com/gjaldon/heroku-buildpack-phoenix-static.git
 https://github.com/amberbit/heroku-buildpack-goon.git
 https://github.com/ello/heroku-buildpack-imagemagick
 https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
-https://github.com/debitoor/heroku-buildpack-converter-fonts.git
+https://github.com/trisignia/heroku-buildpack-converter-fonts
 ```
 
 ## About [DailyDrip](https://www.dailydrip.com)

@@ -11,7 +11,7 @@ defmodule FlyExample.Worker.TextImage do
       Porcelain.exec("convert", [
                        "-background", "blue",
                        "-fill", "white",
-                       "-font", "Impact",
+                       "-font", System.get_env("FONT"),
                        "-size", "640x100",
                        "-gravity", "North",
                        "-stroke", "black",

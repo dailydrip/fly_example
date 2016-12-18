@@ -13,7 +13,7 @@ defmodule FlyExample.Worker.Meme do
       Porcelain.exec("convert", [
                        "-background", "none",
                        "-fill", "white",
-                       "-font", "Impact",
+                       "-font", System.get_env("FONT"),
                        "-size", "640x100",
                        "-gravity", "center",
                        "-stroke", "black",
@@ -33,7 +33,7 @@ defmodule FlyExample.Worker.Meme do
           Porcelain.exec("convert", [
                            "-background", "none",
                            "-fill", "white",
-                           "-font", "Impact",
+                           "-font", System.get_env("FONT"),
                            "-size", "640x100",
                            "-gravity", "center",
                            "-stroke", "black",
